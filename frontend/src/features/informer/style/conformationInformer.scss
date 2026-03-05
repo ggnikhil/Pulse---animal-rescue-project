@@ -1,0 +1,82 @@
+// ═══════════════════════════════════════════
+// Informer Conformation Page
+// ═══════════════════════════════════════════
+
+main {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--bg-page);
+  background-image: var(--bg-gradient);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .conformation {
+    width: 100%;
+    max-width: 420px;
+    padding: var(--space-xl) var(--space-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-lg);
+
+    // ── Checkmark ───────────────────────
+    .check-icon {
+      font-size: 72px;
+      animation: pop 0.4s ease;
+    }
+
+    @keyframes pop {
+      0%   { transform: scale(0); opacity: 0; }
+      80%  { transform: scale(1.2); }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    // ── Text ────────────────────────────
+    .conformation-text {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      h1 {
+        font-family: var(--font-primary);
+        font-size: var(--text-xl);
+        font-weight: 700;
+        color: var(--orange-dark);
+      }
+
+      p {
+        font-family: var(--font-primary);
+        font-size: var(--text-base);
+        color: var(--text-secondary);
+        line-height: 1.6;
+      }
+    }
+
+    // ── Buttons ─────────────────────────
+    .conformation-btns {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      .btn-outline {
+        width: 100%;
+        padding: 12px var(--space-md);
+        background-color: transparent;
+        border: 2px solid var(--orange);
+        border-radius: var(--radius-sm);
+        font-family: var(--font-primary);
+        font-size: var(--text-base);
+        font-weight: 700;
+        color: var(--orange);
+        cursor: pointer;
+        transition: all 0.15s ease;
+
+        &:hover { background-color: var(--bg-orange-tint); }
+        &:active { scale: 0.97; }
+      }
+    }
+  }
+}

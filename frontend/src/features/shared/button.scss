@@ -1,0 +1,51 @@
+// ═══════════════════════════════════════════
+// PULSE — Global Button Styles
+// ═══════════════════════════════════════════
+
+%btn-base {
+  width: 100%;
+  padding: 10px 28px;
+  font-family: var(--font-primary);
+  font-size: var(--text-base);
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  letter-spacing: 0.5px;
+  color: var(--text-white);
+  border: 2px solid transparent;
+
+  &:active {
+    scale: 0.97;
+  }
+}
+
+.btn-orange {
+  @extend %btn-base;
+  background-color: var(--orange);
+  border-color: var(--orange-dark);
+
+  &:hover {
+    background-color: var(--orange-dark);
+  }
+}
+
+.btn-blue {
+  @extend %btn-base;
+  background-color: var(--blue);
+  border-color: #0D47A1;
+
+  &:hover {
+    background-color: #0D47A1;
+  }
+}
+
+.btn-red {
+  @extend %btn-base;
+  background-color: var(--red);
+  border-color: #B71C1C;
+
+  &:hover {
+    background-color: #B71C1C;
+  }
+}

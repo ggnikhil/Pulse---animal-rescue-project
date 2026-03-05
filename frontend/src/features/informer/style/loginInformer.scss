@@ -1,0 +1,117 @@
+
+main {
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg-page);
+  background-image: var(--bg-gradient);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  .informerLogin {
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0px var(--space-md);
+    gap: 10px;
+
+    // ── Box 1 — Header ────────────────────
+    .loginbox1 {
+      height: 50px;
+      width: 100%;
+
+      h1 {
+        font-family: var(--font-primary);
+        font-size: var(--text-xl);
+        font-weight: 700;
+        color: var(--orange-dark);
+        letter-spacing: 2px;
+      }
+    }
+
+    // ── Box 2 — Form ──────────────────────
+    .loginbox2 {
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-md);
+      }
+
+      .emailbox,
+      .passwordbox {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        h3 {
+          font-family: var(--font-primary);
+          font-size: var(--text-base);
+          font-weight: 700;
+          color: var(--text-primary);
+        }
+
+        input {
+          padding: 12px var(--space-md);
+          border: 2px solid var(--text-secondary);
+          border-radius: var(--radius-sm);
+          font-family: var(--font-primary);
+          font-size: var(--text-base);
+          color: var(--text-primary);
+          background-color: var(--bg-page);
+          outline: none;
+          transition: border-color 0.1s ease;
+
+          &::placeholder {
+            color: var(--text-muted);
+          }
+
+          &:focus {
+            border-color: var(--orange);
+          }
+        }
+      }
+    }
+
+    // ── Box 3 — Link ──────────────────────
+    .loginbox3 {
+      padding: 0 var(--space-lg) var(--space-lg);
+
+      .loginPtag {
+        text-align: center;
+        font-size: var(--text-base);
+        color: black;
+        margin-top: var(--space-sm);
+
+        a {
+          color: var(--orange);
+          font-weight: 700;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    // ── Box 4 — Policy ────────────────────
+    .loginbox4 {
+          position: absolute;
+          bottom: 1%;
+          left: 0;      // 👈 add karo
+          right: 0;     // 👈 add karo
+          padding: var(--space-md) var(--space-lg);
+
+          .policyPara {
+            font-size: var(--text-xs);
+            line-height: 1.2;   // 👈 1.2 se 1.6 karo
+            text-align: center;
+            color: black;
+          }
+      }
+  }
+}

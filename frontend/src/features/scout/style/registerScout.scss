@@ -1,0 +1,184 @@
+// ═══════════════════════════════════════════
+// Scout Register Page
+// ═══════════════════════════════════════════
+
+main {
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg-page);
+  background-image: var(--bg-gradient);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .scoutregister {
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px var(--space-md);
+    gap: 10px;
+
+    // ── Header ────────────────────────────
+    .registerbox1 {
+      height: 50px;
+      width: 100%;
+
+      h1 {
+        font-family: var(--font-primary);
+        font-size: var(--text-xl);
+        font-weight: 700;
+        color: var(--orange-dark);
+        letter-spacing: 2px;
+      }
+    }
+
+    // ── Form ──────────────────────────────
+    .registerbox2 {
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-md);
+      }
+
+      // ── Username + NGO side by side ──────
+      .namedail {
+        display: flex;
+        gap: var(--space-sm);
+
+        .namedailbox1,
+        .namedailbox2 {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+
+          h3 {
+            font-family: var(--font-primary);
+            font-size: var(--text-sm);
+            font-weight: 700;
+            color: var(--text-primary);
+          }
+
+          input {
+            width: 100%;
+            padding: 12px var(--space-sm);
+            border: 2px solid var(--text-secondary);
+            border-radius: var(--radius-sm);
+            font-family: var(--font-primary);
+            font-size: var(--text-sm);
+            color: var(--text-primary);
+            background-color: var(--bg-page);
+            outline: none;
+            transition: border-color 0.1s ease;
+
+            &::placeholder { color: var(--text-muted); }
+            &:focus { border-color: var(--orange); }
+          }
+        }
+      }
+
+      // ── Single Fields ─────────────────
+      .contact,
+      .ngoaddress,
+      .email,
+      .password {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        h3 {
+          font-family: var(--font-primary);
+          font-size: var(--text-base);
+          font-weight: 700;
+          color: var(--text-primary);
+        }
+
+        input {
+          padding: 12px var(--space-md);
+          border: 2px solid var(--text-secondary);
+          border-radius: var(--radius-sm);
+          font-family: var(--font-primary);
+          font-size: var(--text-base);
+          color: var(--text-primary);
+          background-color: var(--bg-page);
+          outline: none;
+          transition: border-color 0.1s ease;
+
+          &::placeholder { color: var(--text-muted); }
+          &:focus { border-color: var(--orange); }
+        }
+      }
+
+      // ── NGO Location ──────────────────
+      .ngolocation {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        h3 {
+          font-family: var(--font-primary);
+          font-size: var(--text-base);
+          font-weight: 700;
+          color: var(--text-primary);
+        }
+
+        .location-box {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 12px var(--space-md);
+          border: 2px solid var(--text-secondary);
+          border-radius: var(--radius-sm);
+          background-color: var(--bg-page);
+          transition: border-color 0.1s ease;
+
+          &:focus-within { border-color: var(--orange); }
+
+          .location-text {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            p {
+              font-family: var(--font-primary);
+              font-size: var(--text-sm);
+              color: var(--text-primary);
+            }
+          }
+
+          .refresh-btn {
+            background: none;
+            border: none;
+            font-family: var(--font-primary);
+            font-size: var(--text-sm);
+            font-weight: 700;
+            color: var(--orange);
+            cursor: pointer;
+
+            &:hover { text-decoration: underline; }
+          }
+        }
+      }
+    }
+
+    // ── Link ──────────────────────────────
+    .registerbox3 {
+      .loginPtag {
+        text-align: center;
+        font-size: var(--text-base);
+        color: black;
+        margin-top: var(--space-sm);
+
+        a {
+          color: var(--orange);
+          font-weight: 700;
+          text-decoration: none;
+
+          &:hover { text-decoration: underline; }
+        }
+      }
+    }
+  }
+}

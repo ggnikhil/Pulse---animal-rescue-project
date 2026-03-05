@@ -1,0 +1,68 @@
+// ═══════════════════════════════════════════
+// PULSE — Global SCSS Variables
+// Animal Rescue Alert Design System
+// ═══════════════════════════════════════════
+
+:root {
+
+  // ── BACKGROUNDS ──────────────────────────
+  --bg-page:        #FFF3E0;
+  --bg-card:        #FFFFFF;
+  --bg-dark:        #263238;
+  --bg-orange-tint: #FFF3E0;
+  --bg-green-tint:  #E8F5E9;
+  --bg-blue-tint:   #F0F8FF;
+
+  // ── PAGE GRADIENT (har page pe use karo) ─
+  --bg-gradient:
+    radial-gradient(circle at 20% 20%, rgba(255, 109, 0, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255, 109, 0, 0.10) 0%, transparent 50%);
+
+  // ── TEXT COLORS ───────────────────────────
+  --text-primary:   #263238;
+  --text-secondary: #546E7A;
+  --text-muted:     #B0BEC5;
+  --text-white:     #FFFFFF;
+
+  // ── ACCENT COLORS ─────────────────────────
+  --orange:         #FF6D00;
+  --orange-dark:    #E65100;
+  --green:          #2E7D32;
+  --red:            #C62828;
+  --blue:           #1565C0;
+
+  // ── BORDER ────────────────────────────────
+  --border:         #B0BEC5;
+  --border-light:   #ECEFF1;
+
+  // ── SHADOW ────────────────────────────────
+  --shadow-card:    0 2px 12px rgba(0, 0, 0, 0.10);
+  --shadow-sm:      0 2px 6px rgba(0, 0, 0, 0.06);
+
+  // ── TYPOGRAPHY ────────────────────────────
+  --font-primary:   'Space Grotesk', sans-serif;
+  --font-mono:      'JetBrains Mono', monospace;
+
+  // ── FONT SIZES ────────────────────────────
+  --text-xs:        11px;
+  --text-sm:        13px;
+  --text-base:      15px;
+  --text-md:        16px;
+  --text-lg:        22px;
+  --text-xl:        32px;
+  --text-2xl:       52px;
+
+  // ── BORDER RADIUS ─────────────────────────
+  --radius-sm:      8px;
+  --radius-md:      12px;
+  --radius-lg:      20px;
+  --radius-xl:      32px;
+
+  // ── SPACING ───────────────────────────────
+  --space-xs:       4px;
+  --space-sm:       8px;
+  --space-md:       16px;
+  --space-lg:       24px;
+  --space-xl:       40px;
+  --space-2xl:      60px;
+}
