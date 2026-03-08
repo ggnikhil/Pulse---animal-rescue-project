@@ -12,14 +12,14 @@ const Start = () => {
 
             <div className='continueinformer'>
                 <div className='informerimg'>
-                    <img src="/public/infomer.jpg" alt="informer" />
+                    <img src="/infomer.jpg" alt="informer" />
                 </div>
                 <button onClick={() => navigate('/informer/login')} className='button'>Continue as Informer</button>
             </div>
 
             <div className='continuescout'>
                 <div className='scoutimg'>
-                    <img src="/public/scout image.jpg" alt="scout" />
+                    <img src="/scout image.jpg" alt="scout" />
                 </div>
                 <button onClick={() => navigate('/scout/login')} className='button'>Continue as Scout</button>
             </div>
