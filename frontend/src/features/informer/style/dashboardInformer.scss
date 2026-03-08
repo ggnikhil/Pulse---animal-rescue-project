@@ -18,15 +18,14 @@
 
     // ── Header ────────────────────────────
     .header {
-        width: 100%;
-        background-color: #FF8528;
+      width: 100%;
+      background-color: #FF8528;
       height: 45px;
       flex-shrink: 0;
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 0 var(--space-md);
-      backdrop-filter: blur(5px);
 
       .header-logo {
         height: 40px;
@@ -58,10 +57,11 @@
       }
 
       .informeruser {
+        position: relative;
         height: 36px;
         width: 36px;
         border-radius: 50%;
-        overflow: hidden;
+        overflow: visible;
         border: 2px solid var(--orange);
         cursor: pointer;
         flex-shrink: 0;
@@ -71,6 +71,30 @@
           height: 100%;
           width: 100%;
           object-fit: cover;
+          border-radius: 50%;
+        }
+
+        &::after {
+          content: 'Tap to logout';
+          position: absolute;
+          bottom: -28px;
+          right: 0;
+          background: rgba(0, 0, 0, 0.75);
+          color: white;
+          font-family: var(--font-primary);
+          font-size: 10px;
+          font-weight: 600;
+          padding: 3px 8px;
+          border-radius: 6px;
+          white-space: nowrap;
+          opacity: 0;
+          transition: opacity 0.2s ease;
+          pointer-events: none;
+          z-index: 999;
+        }
+
+        &:hover::after {
+          opacity: 1;
         }
       }
     }

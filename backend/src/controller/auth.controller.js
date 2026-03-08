@@ -40,10 +40,12 @@ async function scoutRegisterController(req,res){
             role:user.role
         },
         process.env.JWT_SECRECT,
-        {expiresIn:"1d"}
+        {expiresIn:"7d"}
     )
 
-    res.cookie("token",token)
+    res.cookie("token",token,{
+        sameSite: "lax"
+    })
 
     res.status(201).json({
         message:"user register successfully",
@@ -83,11 +85,13 @@ async function scoutLoginController(req,res){
         },
         process.env.JWT_SECRECT,
         {
-            expiresIn:"1d"
+            expiresIn:"7d"
         }
     )
 
-    res.cookie("token",token)
+    res.cookie("token",token,{
+        sameSite: "lax"
+    })
 
     res.status(200).json({
         message:"user login successfully",
@@ -157,10 +161,12 @@ async function informerRegisterController(req,res){
     const token = jwt.sign(
         { id: user._id, username: user.username,role:user.role },
         process.env.JWT_SECRECT,
-        { expiresIn: "1d" }
+        { expiresIn: "7d" }
     )
 
-    res.cookie("token", token)
+    res.cookie("token", token,{
+        sameSite: "lax"
+    })
 
     res.status(201).json({
         message: "informer registered successfully",
@@ -192,10 +198,12 @@ async function informerLoginController(req,res){
     const token = jwt.sign(
         { id: checkUser._id, username: checkUser.username,role: checkUser.role },
         process.env.JWT_SECRECT,
-        { expiresIn: "1d" }
+        { expiresIn: "7d" }
     )
 
-    res.cookie("token", token)
+    res.cookie("token", token,{
+        sameSite: "lax"
+    })
 
     res.status(200).json({
         message: "informer login successfully",

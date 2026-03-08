@@ -40,6 +40,6 @@ export async function resolveReport(id) {
 }
 
 export async function logoutScout() {
-    const response = await api.post("/auth/logout")
+    const response = await api.post("/auth/logout-scout")
     return response.data
 }
